@@ -12,6 +12,7 @@ Everything running or planned on the rack, by layer. Hardware and purchase links
 | Proxmox Storage Replication | Periodic ZFS snapshot sync between nodes — the HA mechanism in place of shared storage | <img src="../images/icons/planned.svg" width="16" align="top" alt="Planned"> Depends on ZFS + clustering |
 | <img src="../images/kuma-badge.svg" width="26" align="middle" alt="Uptime Kuma logo"> [Uptime Kuma](https://github.com/louislam/uptime-kuma) | Self-hosted uptime/status monitoring, as an LXC | <img src="../images/icons/planned.svg" width="16" align="top" alt="Planned"> Not yet deployed |
 | <img src="../images/portainer-badge.svg" width="119" align="middle" alt="Portainer logo"> [Portainer](https://www.portainer.io/) | Docker/container management UI, as an LXC | <img src="../images/icons/planned.svg" width="16" align="top" alt="Planned"> Not yet deployed |
+| <img src="../images/homepage-badge.svg" width="90" align="middle" alt="Homepage logo"> [Homepage](https://github.com/gethomepage/homepage) | Self-hosted dashboard — single landing page for services across both clusters, as an LXC | <img src="../images/icons/planned.svg" width="16" align="top" alt="Planned"> Not yet deployed |
 
 Full reasoning on the clustering and storage design is in [`proxmox-ha.md`](proxmox-ha.md).
 
