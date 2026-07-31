@@ -27,11 +27,18 @@ Worth noting: 65W matches the OEM rating for both machines rather than exceeding
 
 All 6 HDMI cables also installed, running to the [HMTECH 10.1" IPS touchscreen](https://www.amazon.com/dp/B0987468N2) (1024 x 600, driver-free over HDMI) hinged on top of the rack. Used for checking each node's boot and video output, not as a permanent console.
 
+## Installation media
+
+A 64GB Kingston USB drive, flashed with [Ventoy](https://www.ventoy.net/) rather than a single ISO. Ventoy turns the drive into a multiboot loader — ISOs get copied onto it like regular files, and a boot menu picks between them at boot time, so there's no re-flashing the stick between operating systems. One drive covers both installs in this build:
+
+- **Proxmox VE** — `PVE1`, `PVE2`, `PVE3`
+- **Ubuntu Server 24.04 LTS** — `INFER1`, `INFER2`, `INFER3` (pending)
+
 ## 5. Proxmox install verification
-<img src="../images/icons/check.svg" width="17" align="top" alt="Done"> Proxmox installed on all 3 ThinkCentres (PVE1, PVE2, PVE3) — configuration (clustering, storage, networking) still to be done. See [`proxmox-ha.md`](proxmox-ha.md).
+<img src="../images/icons/check.svg" width="17" align="top" alt="Done"> Proxmox installed on all 3 ThinkCentres (PVE1, PVE2, PVE3) via the Ventoy USB — configuration (clustering, storage, networking) still to be done. See [`proxmox-ha.md`](proxmox-ha.md).
 
 ## 6. AI cluster node setup
-<img src="../images/icons/progress.svg" width="17" align="top" alt="In progress"> In progress — hardware ready (middle node replaced), nodes are un-imaged (no OS installed yet). Next step: image with Ubuntu Server. See [`ai-cluster.md`](ai-cluster.md).
+<img src="../images/icons/progress.svg" width="17" align="top" alt="In progress"> In progress — hardware ready (middle node replaced), nodes are un-imaged (no OS installed yet). Next step: image with Ubuntu Server, same Ventoy USB. See [`ai-cluster.md`](ai-cluster.md).
 
 ---
 

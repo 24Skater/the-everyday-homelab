@@ -29,7 +29,7 @@ Once the basics work, splitting a larger model across all 3 nodes (llama.cpp RPC
 
 ## Next steps
 
-1. Image each node with Ubuntu Server 24.04 LTS
+1. Image each node with Ubuntu Server 24.04 LTS (via the [Ventoy](https://www.ventoy.net/) USB — see [`build-log.md`](build-log.md))
 2. Install k3s (server on `INFER1`, agents on `INFER2`/`INFER3`)
 3. Deploy Ollama as a replicated service across the cluster
 4. Load starting models and test
