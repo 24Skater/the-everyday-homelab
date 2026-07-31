@@ -112,29 +112,50 @@ The rack is built and wired, and I'm partway through configuration. Everything b
 <br>
 <li><img src="images/icons/network.svg" width="18" align="top" alt=""> <b>Networking</b> — TP-Link 8-port switch, 1 fiber SFP port unused, all 6 nodes wired at 1GbE</li>
 <br>
-<li><img src="images/icons/power.svg" width="18" align="top" alt=""> <b>Power</b> — Anker 65W USB-C PD per node, ElecVoztile rack PDU (125V 15A 1875W)</li>
+<li><img src="images/icons/power.svg" width="18" align="top" alt=""> <b>Power</b> — every node on the same Anker 65W GaN charger via a USB-C-to-tip cable, into an 8-outlet 1U PDU</li>
 <br>
-<li><img src="images/icons/monitor.svg" width="18" align="top" alt=""> <b>Console</b> — 10" touchscreen hinged on top, used to check each node's boot output. Not a permanent console</li>
+<li><img src="images/icons/server-rack.svg" width="18" align="top" alt=""> <b>Enclosure</b> — GeeekPi 8U 10-inch cabinet (DeskPi RackMate T1 Plus), one 1U shelf per node with front RJ45 + HDMI pass-through</li>
+<br>
+<li><img src="images/icons/monitor.svg" width="18" align="top" alt=""> <b>Console</b> — HMTECH 10.1" IPS touchscreen hinged on top, used to check each node's boot output. Not a permanent console</li>
 </ul>
 </td>
 </tr>
 </table>
 
+### <img src="images/icons/power.svg" width="19" align="top"> One power standard for six nodes
+
+Neither machine takes USB-C power natively, and they disagree about the shape of the plug — the ThinkCentres want Lenovo's square slim tip, the OptiPlexes want a 4.5 × 3.0 mm barrel. The obvious path is six OEM bricks in two shapes. Instead every node runs the same **Anker Nano 65W GaN charger** with a short USB-C-to-tip cable doing the translation:
+
+| Nodes | Tip needed | Cable |
+|---|---|---|
+| ThinkCentre Tiny × 3 | Lenovo slim tip (square) | [USB-C → slim tip, 100W PD](https://www.amazon.com/dp/B0947RD4H2) |
+| OptiPlex 7050 Micro × 3 | 4.5 × 3.0 mm barrel | [USB-C → 4.5 × 3.0 mm, 100W PD](https://www.amazon.com/dp/B0975DWM1R) |
+
+Six identical chargers means one spare covers any node in the rack, the bricks stack instead of fighting for outlet space, and replacing a dead PSU is a $20 part rather than a hunt for a discontinued OEM adapter.
+
+> [!NOTE]
+> 65W matches the OEM rating for both machines rather than exceeding it, so there's no headroom for a higher-draw configuration. Total draw is roughly 390W flat out against the PDU's 1875W, so the rail is nowhere near the limit — the per-node budget is the thing to watch, not the total.
+
 <details>
-<summary><b>Full hardware inventory</b></summary>
+<summary><b>Full hardware inventory</b> — with links to everything</summary>
 
 <br>
 
-| Component | Qty | Model | Role |
+| Component | Qty | Model | Notes |
 |---|:--:|---|---|
+| Enclosure | 1 | [GeeekPi 8U 10-inch cabinet](https://www.amazon.com/dp/B0FWJXF7FM) (DeskPi RackMate T1 Plus) | 260 mm depth |
+| Node shelves | 6 | [GeeekPi 10-inch 1U mini-PC shelf](https://www.amazon.com/dp/B0FN44R7F2) | Front RJ45 CAT6 + HDMI pass-through — why the cabling presents at the front |
 | Compute nodes | 3 | Lenovo ThinkCentre Tiny — `TC1`, `TC2`, `TC3` | Proxmox VE hypervisor nodes |
-| AI cluster nodes | 3 | Dell OptiPlex 7050 Micro | Local AI/LLM testing |
-| Switch | 1 | TP-Link 8-port (3 uplinks, 1× fiber) | Core network switch |
-| Power supplies | 6 | Anker 65W USB-C PD adapter | One per node |
-| Power distribution | 1 | ElecVoztile PDU, 125V 15A 1875W | Rack-mounted power strip |
-| Display | 1 | 10" touchscreen (Dell mini PC, Windows) | Diagnostic monitor |
-| Enclosure | 1 | 10-inch mini rack | Houses all nodes + switch |
+| AI cluster nodes | 3 | Dell OptiPlex 7050 Micro — `AI1`, `AI2`, `AI3` | Kaby Lake i5/i7, integrated graphics only |
+| Switch | 1 | TP-Link 8-port (uplink ports, 1× SFP fiber) | Core switch, SFP unused |
+| Power supplies | 6 | [Anker Nano 65W GaN II PPS](https://www.amazon.com/dp/B08T5QN2TR) | One per node, single USB-C |
+| Lenovo power cables | 3 | [USB-C → slim tip, 100W PD, 6.5 ft](https://www.amazon.com/dp/B0947RD4H2) | For the ThinkCentres |
+| Dell power cables | 3 | [USB-C → 4.5 × 3.0 mm barrel, 100W PD, 6.5 ft](https://www.amazon.com/dp/B0975DWM1R) | For the OptiPlexes |
+| Power distribution | 1 | [ElecVoztile 10-inch 1U PDU](https://www.amazon.com/dp/B0FRMQJGJB) | 8 rear outlets, 15A, 1020J surge, 6 ft cable |
+| Display | 1 | [HMTECH 10.1" IPS touchscreen](https://www.amazon.com/dp/B0987468N2) | 1024 × 600, HDMI, driver-free |
 | Wireless | 1 | Wireless router *(planned)* | AP mode, not yet installed |
+
+Links are plain product URLs — no affiliate tags, nothing tracked.
 
 </details>
 
