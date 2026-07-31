@@ -21,11 +21,11 @@ One charger model across the whole rack: a single spare covers any node, the GaN
 Worth noting: 65W matches the OEM rating for both machines rather than exceeding it, so there is no headroom for a higher-draw configuration. Six nodes at full tilt is roughly 390W against the [PDU's](https://www.amazon.com/dp/B0FRMQJGJB) 15A / 1875W, so the rail has plenty of room — the per-node budget is the constraint, not the total.
 
 ## 4. Network cabling
-<img src="../images/icons/check.svg" width="17" align="top" alt="Done"> Done — all 6 Ethernet runs made and connected:
+<img src="../images/icons/check.svg" width="17" align="top" alt="Done"> Done — all 6 Ethernet runs hand-terminated (crimped my own RJ45 ends, not pre-made patch cables) and connected:
 - 3x cable (green boots) — PVE1/PVE2/PVE3 → switch
 - 3x cable (white boots) — switch → each OptiPlex node
 
-All 6 HDMI cables also installed, running to the [HMTECH 10.1" IPS touchscreen](https://www.amazon.com/dp/B0987468N2) (1024 x 600, driver-free over HDMI) hinged on top of the rack. Used for checking each node's boot and video output, not as a permanent console.
+All 6 HDMI cables also installed — [Vorothin 4K HDMI, 3 ft, 10-pack](https://www.amazon.com/dp/B0DBLJ97JZ) — running to the [HMTECH 10.1" IPS touchscreen](https://www.amazon.com/dp/B0987468N2) (1024 x 600, driver-free over HDMI) hinged on top of the rack. Used for checking each node's boot and video output, not as a permanent console.
 
 ## Installation media
 

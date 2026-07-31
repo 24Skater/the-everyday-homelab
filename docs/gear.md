@@ -73,6 +73,20 @@ Neither the ThinkCentre nor the OptiPlex takes USB-C power natively, and the two
 
 Hinged on top of the cabinet, used to check each node's boot and POST output during setup. Not wired as a permanent console for any node.
 
+## Networking
+
+<table>
+<tr><td width="130"><img src="../images/gear-hdmi.jpg" width="120" alt="Ten coiled black HDMI cables with gold-plated connectors, in original retail packaging"></td>
+<td>
+
+**[Vorothin 4K HDMI cable, 3 ft, 10-pack](https://www.amazon.com/dp/B0DBLJ97JZ)** — 6 of 10 used
+HDMI 2.0, 4K@60Hz, HDCP 2.2. One run per node to the touchscreen, for checking boot/POST output — not a permanent display connection.
+
+</td></tr>
+</table>
+
+**Ethernet runs — hand-terminated, no purchase link.** All six patch cables are self-made: RJ45 ends crimped by hand rather than bought pre-made, green boots on the three Proxmox runs and white boots on the three AI cluster runs. Boot colour is the only labelling scheme on the whole rack. Full cabling story in [`build-log.md`](build-log.md).
+
 ## Installation media
 
 <table>
