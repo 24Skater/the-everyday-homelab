@@ -13,7 +13,8 @@
 <a href="#proxmox"><b>Proxmox</b></a> &nbsp;·&nbsp;
 <a href="#ai"><b>AI cluster</b></a> &nbsp;·&nbsp;
 <a href="#open"><b>Open questions</b></a> &nbsp;·&nbsp;
-<a href="docs/gear.md"><b>Gear</b></a>
+<a href="docs/gear.md"><b>Gear</b></a> &nbsp;·&nbsp;
+<a href="docs/software.md"><b>Software</b></a>
 </p>
 
 <p>
@@ -266,6 +267,7 @@ Genuinely unresolved. I'd take input on any of these — open an issue or a disc
 | [`docs/proxmox-ha.md`](docs/proxmox-ha.md) | Cluster formation, HA group design, ZFS replication, planned services |
 | [`docs/ai-cluster.md`](docs/ai-cluster.md) | OS choice, k3s layout, serving pattern reasoning, model selection |
 | [`docs/gear.md`](docs/gear.md) | Every part with a link — enclosure, shelves, power, console |
+| [`docs/software.md`](docs/software.md) | Everything running or planned, by layer, with status |
 
 Build photos go in [`images/`](images/) as they're taken.
 

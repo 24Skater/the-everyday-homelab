@@ -1,6 +1,10 @@
 # Proxmox Cluster + HA Plan
 
+<img src="../images/proxmox-badge.svg" width="200" alt="Proxmox VE logo">
+
 Nodes: `TC1`, `TC2`, `TC3` — Lenovo ThinkCentre Tiny, Proxmox VE installed on all three.
+
+Software versions and every other piece running on the rack are tracked in [`software.md`](software.md).
 
 ## Cluster formation
 
