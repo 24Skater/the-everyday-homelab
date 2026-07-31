@@ -1,6 +1,6 @@
 # Software
 
-Everything running or planned on the rack, by layer. Hardware and purchase links are in [`gear.md`](gear.md) — this tracks what's installed on top of it.
+Everything running or planned on the rack, by layer, plus the tooling used to build it. Hardware and purchase links are in [`gear.md`](gear.md) — this tracks what's installed on top of it and what's used to install it.
 
 ## Proxmox cluster
 
@@ -34,6 +34,16 @@ Full reasoning on the clustering and storage design is in [`proxmox-ha.md`](prox
 | Qwen2.5 | 7B (Q4) |
 
 Full reasoning on the serving pattern — replicas instead of one model split across nodes — is in [`ai-cluster.md`](ai-cluster.md).
+
+## Off-rack tooling
+
+Software that helped build this but never runs on a node itself.
+
+| Software | Role | Status |
+|---|---|---|
+| [Ventoy](https://www.ventoy.net/) | Multiboot loader on the [installation USB](gear.md#installation-media) — Proxmox VE and Ubuntu Server ISOs both live on the same drive, no re-flashing between installs | <img src="../images/icons/check.svg" width="16" align="top" alt="Done"> In use |
+
+Full story in [`build-log.md`](build-log.md#installation-media).
 
 ---
 

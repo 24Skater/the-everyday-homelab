@@ -73,6 +73,18 @@ Neither the ThinkCentre nor the OptiPlex takes USB-C power natively, and the two
 
 Hinged on top of the cabinet, used to check each node's boot and POST output during setup. Not wired as a permanent console for any node.
 
+## Installation media
+
+<table>
+<tr><td width="130"><img src="../images/gear-usb-drive.jpg" width="120" alt="Kingston DataTraveler 100 G3 64GB USB flash drive"></td>
+<td>
+
+**Kingston DataTraveler 100 G3** — 64GB, qty 1
+Flashed with [Ventoy](https://www.ventoy.net/) as a multiboot loader instead of a single ISO — one drive installs both operating systems in this build. Full story in [`build-log.md`](build-log.md#installation-media).
+
+</td></tr>
+</table>
+
 ---
 
 Compute nodes and the switch don't have a purchase link — they came from elsewhere or predate this build. Full inventory including those is in the [hardware table](../README.md#rack) on the main README.
