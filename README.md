@@ -12,7 +12,8 @@
 <a href="#network"><b>Network</b></a> &nbsp;·&nbsp;
 <a href="#proxmox"><b>Proxmox</b></a> &nbsp;·&nbsp;
 <a href="#ai"><b>AI cluster</b></a> &nbsp;·&nbsp;
-<a href="#open"><b>Open questions</b></a>
+<a href="#open"><b>Open questions</b></a> &nbsp;·&nbsp;
+<a href="docs/gear.md"><b>Gear</b></a>
 </p>
 
 <p>
@@ -131,31 +132,28 @@ Neither machine takes USB-C power natively, and they disagree about the shape of
 | ThinkCentre Tiny × 3 | Lenovo slim tip (square) | [USB-C → slim tip, 100W PD](https://www.amazon.com/dp/B0947RD4H2) |
 | OptiPlex 7050 Micro × 3 | 4.5 × 3.0 mm barrel | [USB-C → 4.5 × 3.0 mm, 100W PD](https://www.amazon.com/dp/B0975DWM1R) |
 
-Six identical chargers means one spare covers any node in the rack, the bricks stack instead of fighting for outlet space, and replacing a dead PSU is a $20 part rather than a hunt for a discontinued OEM adapter.
+Six identical chargers means one spare covers any node in the rack, the bricks stack instead of fighting for outlet space, and replacing a dead PSU is a $20 part rather than a hunt for a discontinued OEM adapter. Full part links, plus the enclosure and console, are in [`docs/gear.md`](docs/gear.md).
 
 > [!NOTE]
 > 65W matches the OEM rating for both machines rather than exceeding it, so there's no headroom for a higher-draw configuration. Total draw is roughly 390W flat out against the PDU's 1875W, so the rail is nowhere near the limit — the per-node budget is the thing to watch, not the total.
 
 <details>
-<summary><b>Full hardware inventory</b> — with links to everything</summary>
+<summary><b>Full hardware inventory</b></summary>
 
 <br>
 
 | Component | Qty | Model | Notes |
 |---|:--:|---|---|
-| Enclosure | 1 | [GeeekPi 8U 10-inch cabinet](https://www.amazon.com/dp/B0FWJXF7FM) (DeskPi RackMate T1 Plus) | 260 mm depth |
-| Node shelves | 6 | [GeeekPi 10-inch 1U mini-PC shelf](https://www.amazon.com/dp/B0FN44R7F2) | Front RJ45 CAT6 + HDMI pass-through — why the cabling presents at the front |
+| Enclosure | 1 | GeeekPi 8U 10-inch cabinet (DeskPi RackMate T1 Plus) | 260 mm depth — see [gear](docs/gear.md#enclosure) for the link |
+| Node shelves | 6 | GeeekPi 10-inch 1U mini-PC shelf | Front RJ45 CAT6 + HDMI pass-through — why the cabling presents at the front |
 | Compute nodes | 3 | Lenovo ThinkCentre Tiny — `TC1`, `TC2`, `TC3` | Proxmox VE hypervisor nodes |
 | AI cluster nodes | 3 | Dell OptiPlex 7050 Micro — `AI1`, `AI2`, `AI3` | Kaby Lake i5/i7, integrated graphics only |
 | Switch | 1 | TP-Link 8-port (uplink ports, 1× SFP fiber) | Core switch, SFP unused |
-| Power supplies | 6 | [Anker Nano 65W GaN II PPS](https://www.amazon.com/dp/B08T5QN2TR) | One per node, single USB-C |
-| Lenovo power cables | 3 | [USB-C → slim tip, 100W PD, 6.5 ft](https://www.amazon.com/dp/B0947RD4H2) | For the ThinkCentres |
-| Dell power cables | 3 | [USB-C → 4.5 × 3.0 mm barrel, 100W PD, 6.5 ft](https://www.amazon.com/dp/B0975DWM1R) | For the OptiPlexes |
-| Power distribution | 1 | [ElecVoztile 10-inch 1U PDU](https://www.amazon.com/dp/B0FRMQJGJB) | 8 rear outlets, 15A, 1020J surge, 6 ft cable |
-| Display | 1 | [HMTECH 10.1" IPS touchscreen](https://www.amazon.com/dp/B0987468N2) | 1024 × 600, HDMI, driver-free |
+| Power | 6 chargers + 2 cable types + 1 PDU | Anker Nano 65W GaN, two tip cables, ElecVoztile PDU | See [gear](docs/gear.md#power) for links and part numbers |
+| Display | 1 | HMTECH 10.1" IPS touchscreen | 1024 × 600, HDMI, driver-free — see [gear](docs/gear.md#console) |
 | Wireless | 1 | Wireless router *(planned)* | AP mode, not yet installed |
 
-Links are plain product URLs — no affiliate tags, nothing tracked.
+Purchase links for every linkable part live in [`docs/gear.md`](docs/gear.md) so they only need updating in one place.
 
 </details>
 
@@ -267,6 +265,7 @@ Genuinely unresolved. I'd take input on any of these — open an issue or a disc
 | [`docs/build-log.md`](docs/build-log.md) | Step-by-step build log — assembly, mounting order, cabling, what broke |
 | [`docs/proxmox-ha.md`](docs/proxmox-ha.md) | Cluster formation, HA group design, ZFS replication, planned services |
 | [`docs/ai-cluster.md`](docs/ai-cluster.md) | OS choice, k3s layout, serving pattern reasoning, model selection |
+| [`docs/gear.md`](docs/gear.md) | Every part with a link — enclosure, shelves, power, console |
 
 Build photos go in [`images/`](images/) as they're taken.
 
