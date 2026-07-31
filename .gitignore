@@ -11,3 +11,6 @@ Thumbs.db
 *.pem
 *.key
 secrets/
+
+# Camera originals and full-res intermediates — the web-sized copies are what the docs use
+images/IMG_*

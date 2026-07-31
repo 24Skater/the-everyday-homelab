@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="400" viewBox="0 0 1280 400" role="img" aria-labelledby="t d">
+<title id="t">The Everyday Homelab — front elevation, as built</title>
+<desc id="d">Technical elevation drawing of an 8-unit mini rack: a 10-inch touchscreen on top, three Lenovo ThinkCentre Tiny nodes running Proxmox VE, a TP-Link 8-port switch, and three Dell OptiPlex 7050 Micro nodes for AI inference. All six runs use blue cable; only the boot colour distinguishes them — green boots on the ThinkCentre runs, white boots on the OptiPlex runs. The three OptiPlex nodes are drawn with dashed outlines because they are not yet imaged.</desc>
+
+<defs>
+  <linearGradient id="paper" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#FAF7F2"/>
+    <stop offset="1" stop-color="#F5EED8"/>
+  </linearGradient>
+  <pattern id="grid" width="16" height="16" patternUnits="userSpaceOnUse">
+    <path d="M16 0V16M0 16H16" fill="none" stroke="#334155" stroke-width="1" stroke-opacity="0.06"/>
+  </pattern>
+  <pattern id="gridMajor" width="80" height="80" patternUnits="userSpaceOnUse">
+    <path d="M80 0V80M0 80H80" fill="none" stroke="#334155" stroke-width="1" stroke-opacity="0.11"/>
+  </pattern>
+  <radialGradient id="vignette" cx="0.78" cy="0.5" r="0.62">
+    <stop offset="0" stop-color="#1B2A41" stop-opacity="0"/>
+    <stop offset="1" stop-color="#1B2A41" stop-opacity="0.05"/>
+  </radialGradient>
+  <filter id="lift" x="-20%" y="-20%" width="140%" height="140%">
+    <feDropShadow dx="0" dy="2" stdDeviation="6" flood-color="#1B2A41" flood-opacity="0.10"/>
+  </filter>
+  <clipPath id="frame"><rect x="24" y="24" width="1232" height="352" rx="16"/></clipPath>
+</defs>
+
+<rect width="1280" height="400" fill="url(#paper)"/>
+<g clip-path="url(#frame)">
+  <rect x="24" y="24" width="1232" height="352" fill="url(#grid)"/>
+  <rect x="24" y="24" width="1232" height="352" fill="url(#gridMajor)"/>
+  <rect x="24" y="24" width="1232" height="352" fill="url(#vignette)"/>
+</g>
+<rect x="24" y="24" width="1232" height="352" rx="16" fill="none" stroke="#E2E8F0" stroke-width="1"/>
+
+<!-- Zone A: drafting margin -->
+<path d="M64 24V376M68 24V376" stroke="#E2E8F0" stroke-width="1"/>
+
+<!-- Zone B: type block -->
+<g font-family="ui-monospace, SFMono-Regular, 'Cascadia Mono', 'DejaVu Sans Mono', Menlo, Consolas, monospace">
+  <text x="96" y="96" font-size="13" letter-spacing="2.6" fill="#334155" textLength="556" lengthAdjust="spacingAndGlyphs">FRONT ELEVATION — AS BUILT — 8U — 6 NODES — 2 CLUSTERS</text>
+</g>
+<text x="96" y="162" font-family="Georgia, 'Times New Roman', 'Liberation Serif', serif" font-size="54" fill="#0B1220" textLength="536" lengthAdjust="spacingAndGlyphs">The Everyday Homelab</text>
+<rect x="96" y="180" width="72" height="3" fill="#C49A2E"/>
+<text x="96" y="216" font-family="Inter, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="17" fill="#334155" textLength="486" lengthAdjust="spacingAndGlyphs">A 10-inch mini rack, two clusters, documented as I build it.</text>
+<text x="96" y="240" font-family="ui-monospace, SFMono-Regular, 'Cascadia Mono', 'DejaVu Sans Mono', Menlo, Consolas, monospace" font-size="13" fill="#334155" textLength="520" lengthAdjust="spacingAndGlyphs">3x PROXMOX VE + HA  ·  3x BARE-METAL k3s + OLLAMA  ·  NO GPU</text>
+
+<!-- Legend -->
+<g font-family="ui-monospace, SFMono-Regular, 'Cascadia Mono', 'DejaVu Sans Mono', Menlo, Consolas, monospace" font-size="12" fill="#334155">
+  <circle cx="102" cy="282" r="5" fill="#15803D"/><text x="116" y="286">RACKED + POWERED</text>
+  <circle cx="268" cy="282" r="5" fill="#B45309"/><text x="282" y="286">CONFIG PENDING</text>
+  <circle cx="420" cy="282" r="5" fill="#64748B"/><text x="434" y="286">NOT YET IMAGED</text>
+</g>
+
+<!-- Title block -->
+<g>
+  <rect x="96" y="318" width="604" height="40" rx="6" fill="none" stroke="#E2E8F0" stroke-width="1"/>
+  <path d="M247 318V358M398 318V358M549 318V358" stroke="#E2E8F0" stroke-width="1"/>
+  <g font-family="ui-monospace, SFMono-Regular, 'Cascadia Mono', 'DejaVu Sans Mono', Menlo, Consolas, monospace" font-size="11" fill="#334155" text-anchor="middle">
+    <text x="171" y="343">SHEET 01</text>
+    <text x="322" y="343">FRONT ELEVATION</text>
+    <text x="473" y="343">REV — 2026-07</text>
+    <text x="624" y="343">SCALE — NTS</text>
+  </g>
+</g>
+
+<!-- Zone C: divider -->
+<path d="M740 48V352" stroke="#E2E8F0" stroke-width="1" stroke-dasharray="2 6"/>
+
+<!-- Zone D: rack elevation -->
+<g>
+  <rect x="820" y="40" width="372" height="318" rx="10" fill="#FFFFFF" stroke="#1B2A41" stroke-width="2" filter="url(#lift)"/>
+  <rect x="820" y="40" width="24" height="318" fill="#F8FAFC"/>
+  <rect x="1168" y="40" width="24" height="318" fill="#F8FAFC"/>
+  <g fill="#1B2A41" fill-opacity="0.28">
+    <circle cx="826" cy="69" r="1.5"/><circle cx="826" cy="106" r="1.5"/><circle cx="826" cy="143" r="1.5"/><circle cx="826" cy="180" r="1.5"/>
+    <circle cx="826" cy="217" r="1.5"/><circle cx="826" cy="254" r="1.5"/><circle cx="826" cy="291" r="1.5"/><circle cx="826" cy="328" r="1.5"/>
+    <circle cx="1186" cy="69" r="1.5"/><circle cx="1186" cy="106" r="1.5"/><circle cx="1186" cy="143" r="1.5"/><circle cx="1186" cy="180" r="1.5"/>
+    <circle cx="1186" cy="217" r="1.5"/><circle cx="1186" cy="254" r="1.5"/><circle cx="1186" cy="291" r="1.5"/><circle cx="1186" cy="328" r="1.5"/>
+  </g>
+
+  <!-- PDU -->
+  <rect x="832" y="196" width="10" height="149" rx="3" fill="#B45309" fill-opacity="0.18" stroke="#B45309" stroke-width="1"/>
+  <g stroke="#B45309" stroke-width="1" stroke-opacity="0.7">
+    <path d="M832 205h10M832 232h10M832 259h10M832 286h10M832 313h10M832 340h10"/>
+  </g>
+  <text x="837" y="270" transform="rotate(-90 837 270)" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="9" fill="#B45309">PDU</text>
+
+  <!-- U1 console -->
+  <rect x="848" y="52" width="304" height="34" rx="6" fill="#FFFFFF" stroke="#1B2A41" stroke-width="1.5"/>
+  <path d="M854 52A6 6 0 0 0 848 58V80A6 6 0 0 0 854 86Z" fill="#334155"/>
+  <text x="872" y="73" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12" fill="#334155" textLength="110" lengthAdjust="spacingAndGlyphs">10&quot; TOUCHSCREEN</text>
+  <rect x="1000" y="57" width="100" height="24" rx="3" fill="#0B1220" fill-opacity="0.08"/>
+  <path d="M1035 55v4M1065 55v4" stroke="#334155" stroke-width="1.5" stroke-linecap="round"/>
+  <path d="M849 53.5h302" stroke="#FFFFFF" stroke-opacity="0.6" stroke-width="1"/>
+  <circle cx="1134" cy="69" r="4" fill="#15803D"/>
+
+  <!-- U2-U4 ThinkCentre -->
+  <rect x="848" y="89" width="304" height="34" rx="6" fill="#FFFFFF" stroke="#1B2A41" stroke-width="1.5"/>
+  <path d="M854 89A6 6 0 0 0 848 95V117A6 6 0 0 0 854 123Z" fill="#2563EB"/>
+  <text x="872" y="110" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12" fill="#334155" textLength="160" lengthAdjust="spacingAndGlyphs">TC1 — THINKCENTRE TINY</text>
+  <path d="M849 90.5h302" stroke="#FFFFFF" stroke-opacity="0.6" stroke-width="1"/>
+  <circle cx="1134" cy="106" r="4" fill="#15803D"/>
+
+  <rect x="848" y="126" width="304" height="34" rx="6" fill="#FFFFFF" stroke="#1B2A41" stroke-width="1.5"/>
+  <path d="M854 126A6 6 0 0 0 848 132V154A6 6 0 0 0 854 160Z" fill="#2563EB"/>
+  <text x="872" y="147" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12" fill="#334155" textLength="160" lengthAdjust="spacingAndGlyphs">TC2 — THINKCENTRE TINY</text>
+  <path d="M849 127.5h302" stroke="#FFFFFF" stroke-opacity="0.6" stroke-width="1"/>
+  <circle cx="1134" cy="143" r="4" fill="#15803D"/>
+
+  <rect x="848" y="163" width="304" height="34" rx="6" fill="#FFFFFF" stroke="#1B2A41" stroke-width="1.5"/>
+  <path d="M854 163A6 6 0 0 0 848 169V191A6 6 0 0 0 854 197Z" fill="#2563EB"/>
+  <text x="872" y="184" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12" fill="#334155" textLength="160" lengthAdjust="spacingAndGlyphs">TC3 — THINKCENTRE TINY</text>
+  <path d="M849 164.5h302" stroke="#FFFFFF" stroke-opacity="0.6" stroke-width="1"/>
+  <circle cx="1134" cy="180" r="4" fill="#15803D"/>
+
+  <!-- U5 switch -->
+  <rect x="848" y="200" width="304" height="34" rx="6" fill="#FFFFFF" stroke="#1B2A41" stroke-width="1.5"/>
+  <path d="M854 200A6 6 0 0 0 848 206V228A6 6 0 0 0 854 234Z" fill="#1B2A41"/>
+  <text x="872" y="221" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12" fill="#334155" textLength="104" lengthAdjust="spacingAndGlyphs">TP-LINK 8-PORT</text>
+  <g>
+    <rect x="996" y="213" width="9" height="7" rx="1" fill="#16A34A"/>
+    <rect x="1009" y="213" width="9" height="7" rx="1" fill="#16A34A"/>
+    <rect x="1022" y="213" width="9" height="7" rx="1" fill="#16A34A"/>
+    <rect x="1035" y="213" width="9" height="7" rx="1" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1"/>
+    <rect x="1048" y="213" width="9" height="7" rx="1" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1"/>
+    <rect x="1061" y="213" width="9" height="7" rx="1" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1"/>
+    <rect x="1074" y="213" width="9" height="7" rx="1" fill="#E2E8F0"/>
+    <rect x="1087" y="213" width="9" height="7" rx="1" fill="none" stroke="#1B2A41" stroke-width="1"/>
+    <path d="M1087 220l9-7" stroke="#1B2A41" stroke-width="1"/>
+  </g>
+  <path d="M849 201.5h302" stroke="#FFFFFF" stroke-opacity="0.6" stroke-width="1"/>
+  <circle cx="1134" cy="217" r="4" fill="#15803D"/>
+
+  <!-- U6-U8 OptiPlex, dashed = not yet imaged -->
+  <rect x="848" y="237" width="304" height="34" rx="6" fill="#FFFFFF" stroke="#64748B" stroke-width="1.5" stroke-dasharray="5 4"/>
+  <path d="M854 237A6 6 0 0 0 848 243V265A6 6 0 0 0 854 271Z" fill="#C49A2E" stroke="#1B2A41" stroke-width="1"/>
+  <text x="872" y="258" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12" fill="#334155" textLength="140" lengthAdjust="spacingAndGlyphs">AI1 — OPTIPLEX 7050</text>
+  <circle cx="1134" cy="254" r="4" fill="#64748B"/>
+
+  <rect x="848" y="274" width="304" height="34" rx="6" fill="#FFFFFF" stroke="#64748B" stroke-width="1.5" stroke-dasharray="5 4"/>
+  <path d="M854 274A6 6 0 0 0 848 280V302A6 6 0 0 0 854 308Z" fill="#C49A2E" stroke="#1B2A41" stroke-width="1"/>
+  <text x="872" y="295" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12" fill="#334155" textLength="140" lengthAdjust="spacingAndGlyphs">AI2 — OPTIPLEX 7050</text>
+  <rect x="1094" y="285" width="3" height="12" fill="#DC2626"/>
+  <text x="1102" y="295" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="9" fill="#DC2626">RMA</text>
+  <circle cx="1134" cy="291" r="4" fill="#64748B"/>
+
+  <rect x="848" y="311" width="304" height="34" rx="6" fill="#FFFFFF" stroke="#64748B" stroke-width="1.5" stroke-dasharray="5 4"/>
+  <path d="M854 311A6 6 0 0 0 848 317V339A6 6 0 0 0 854 345Z" fill="#C49A2E" stroke="#1B2A41" stroke-width="1"/>
+  <text x="872" y="332" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12" fill="#334155" textLength="140" lengthAdjust="spacingAndGlyphs">AI3 — OPTIPLEX 7050</text>
+  <circle cx="1134" cy="328" r="4" fill="#64748B"/>
+</g>
+
+<!-- Cluster brackets -->
+<g fill="none" stroke-width="2" stroke-linecap="round">
+  <path d="M818 89H808V197H818" stroke="#2563EB"/>
+  <path d="M818 237H808V345H818" stroke="#C49A2E"/>
+</g>
+<g font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" text-anchor="middle">
+  <text x="798" y="143" transform="rotate(-90 798 143)" font-size="10" fill="#2563EB" textLength="62" lengthAdjust="spacingAndGlyphs">PROXMOX HA</text>
+  <text x="786" y="143" transform="rotate(-90 786 143)" font-size="9" fill="#B45309" textLength="54" lengthAdjust="spacingAndGlyphs">HA PENDING</text>
+  <text x="798" y="291" transform="rotate(-90 798 291)" font-size="10" fill="#334155" textLength="48" lengthAdjust="spacingAndGlyphs">AI / k3s</text>
+  <text x="786" y="291" transform="rotate(-90 786 291)" font-size="9" fill="#334155" textLength="50" lengthAdjust="spacingAndGlyphs">NO OS YET</text>
+</g>
+
+<!-- Cable raceway: blue jackets, colour-coded boots at the node end -->
+<g fill="none" stroke-linecap="round">
+  <path d="M1156 106H1192M1156 143H1192M1156 180H1192M1156 217H1192M1156 254H1192M1156 291H1192M1156 328H1192" stroke="#5E7FA6" stroke-width="2.5"/>
+  <path d="M1192 106C1244 106 1244 217 1192 217" stroke="#5E7FA6" stroke-width="2.5"/>
+  <path d="M1192 143C1230 143 1230 217 1192 217" stroke="#5E7FA6" stroke-width="2.5"/>
+  <path d="M1192 180C1216 180 1216 217 1192 217" stroke="#5E7FA6" stroke-width="2.5"/>
+  <path d="M1192 217C1216 217 1216 254 1192 254" stroke="#5E7FA6" stroke-width="2.5"/>
+  <path d="M1192 217C1230 217 1230 291 1192 291" stroke="#5E7FA6" stroke-width="2.5"/>
+  <path d="M1192 217C1244 217 1244 328 1192 328" stroke="#5E7FA6" stroke-width="2.5"/>
+</g>
+<g>
+  <rect x="1142" y="103" width="14" height="6" rx="3" fill="#16A34A"/>
+  <rect x="1142" y="140" width="14" height="6" rx="3" fill="#16A34A"/>
+  <rect x="1142" y="177" width="14" height="6" rx="3" fill="#16A34A"/>
+  <g fill="#FDFDFD" stroke="#64748B" stroke-width="1">
+    <rect x="1142" y="251" width="14" height="6" rx="3"/>
+    <rect x="1142" y="288" width="14" height="6" rx="3"/>
+    <rect x="1142" y="325" width="14" height="6" rx="3"/>
+  </g>
+</g>
+</svg>
