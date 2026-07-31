@@ -13,6 +13,7 @@ Everything running or planned on the rack, by layer. Hardware and purchase links
 | <img src="../images/kuma-badge.svg" width="26" align="middle" alt="Uptime Kuma logo"> [Uptime Kuma](https://github.com/louislam/uptime-kuma) | Self-hosted uptime/status monitoring, as an LXC | <img src="../images/icons/planned.svg" width="16" align="top" alt="Planned"> Not yet deployed |
 | <img src="../images/portainer-badge.svg" width="119" align="middle" alt="Portainer logo"> [Portainer](https://www.portainer.io/) | Docker/container management UI, as an LXC | <img src="../images/icons/planned.svg" width="16" align="top" alt="Planned"> Not yet deployed |
 | <img src="../images/homepage-badge.svg" width="90" align="middle" alt="Homepage logo"> [Homepage](https://github.com/gethomepage/homepage) | Self-hosted dashboard — single landing page for services across both clusters, as an LXC | <img src="../images/icons/planned.svg" width="16" align="top" alt="Planned"> Not yet deployed |
+| <img src="../images/gitea-badge.svg" width="59" align="middle" alt="Gitea logo"> [Gitea](https://about.gitea.com/products/gitea/) | Self-hosted Git service — repo for this build's configs/manifests, as an LXC | <img src="../images/icons/planned.svg" width="16" align="top" alt="Planned"> Not yet deployed |
 
 Full reasoning on the clustering and storage design is in [`proxmox-ha.md`](proxmox-ha.md).
 

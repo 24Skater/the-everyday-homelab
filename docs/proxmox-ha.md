@@ -30,6 +30,7 @@ A shared NFS/iSCSI target via a NAS would be a cleaner alternative if one gets a
 - **Uptime Kuma** — self-hosted uptime/status monitoring
 - **Portainer** — Docker/container management UI
 - **[Homepage](https://github.com/gethomepage/homepage)** — self-hosted dashboard, single landing page for the services running across both clusters
+- **[Gitea](https://about.gitea.com/products/gitea/)** — self-hosted Git service, for this build's own configs/manifests as they accumulate
 - *(add more here as decided)*
 
 Given the ThinkCentre Tiny's limited RAM, lean toward LXC containers over full VMs for these — much lower overhead per service.
@@ -39,4 +40,4 @@ Given the ThinkCentre Tiny's limited RAM, lean toward LXC containers over full V
 1. Form the cluster (Datacenter → Cluster → Join)
 2. Set up ZFS + storage replication
 3. Configure HA groups/priorities per the split above
-4. Spin up LXCs for Uptime Kuma / Portainer / Homepage
+4. Spin up LXCs for Uptime Kuma / Portainer / Homepage / Gitea
