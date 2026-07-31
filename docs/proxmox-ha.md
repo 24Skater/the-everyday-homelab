@@ -2,7 +2,7 @@
 
 <img src="../images/proxmox-badge.svg" width="200" alt="Proxmox VE logo">
 
-Nodes: `TC1`, `TC2`, `TC3` — Lenovo ThinkCentre Tiny, Proxmox VE installed on all three.
+Nodes: `PVE1`, `PVE2`, `PVE3` — Lenovo ThinkCentre Tiny, Proxmox VE installed on all three.
 
 Software versions and every other piece running on the rack are tracked in [`software.md`](software.md).
 
@@ -14,8 +14,8 @@ Join all 3 nodes into a single Proxmox cluster. Quorum with 3 nodes is a majorit
 
 Rather than dedicating one full node as a pure backup, all 3 stay live cluster members with different roles:
 
-- **TC1 + TC2** — primary compute pair, higher-priority HA group, run the workloads that should auto-failover
-- **TC3** — lower HA priority, hosts backup/monitoring services day-to-day, but remains a full cluster member and automatically picks up VMs if TC1 or TC2 goes down
+- **PVE1 + PVE2** — primary compute pair, higher-priority HA group, run the workloads that should auto-failover
+- **PVE3** — lower HA priority, hosts backup/monitoring services day-to-day, but remains a full cluster member and automatically picks up VMs if PVE1 or PVE2 goes down
 
 This gets real automatic failover on the two primary nodes plus a dedicated backup/monitoring role on the third, without sacrificing quorum or a third of total compute capacity.
 

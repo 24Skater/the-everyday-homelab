@@ -50,15 +50,15 @@
 <g font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace">
   <rect x="56" y="120" width="190" height="52" rx="10" fill="#FFFFFF" stroke="#1B2A41" stroke-width="1.5"/>
   <rect x="56" y="120" width="5" height="52" rx="2.5" fill="#2563EB"/>
-  <text x="74" y="145" font-size="13" fill="#0B1220">TC1</text>
+  <text x="74" y="145" font-size="13" fill="#0B1220">PVE1</text>
   <text x="74" y="161" font-size="10" fill="#334155">THINKCENTRE — PROXMOX VE</text>
   <rect x="56" y="190" width="190" height="52" rx="10" fill="#FFFFFF" stroke="#1B2A41" stroke-width="1.5"/>
   <rect x="56" y="190" width="5" height="52" rx="2.5" fill="#2563EB"/>
-  <text x="74" y="215" font-size="13" fill="#0B1220">TC2</text>
+  <text x="74" y="215" font-size="13" fill="#0B1220">PVE2</text>
   <text x="74" y="231" font-size="10" fill="#334155">THINKCENTRE — PROXMOX VE</text>
   <rect x="56" y="260" width="190" height="52" rx="10" fill="#FFFFFF" stroke="#1B2A41" stroke-width="1.5"/>
   <rect x="56" y="260" width="5" height="52" rx="2.5" fill="#2563EB"/>
-  <text x="74" y="285" font-size="13" fill="#0B1220">TC3</text>
+  <text x="74" y="285" font-size="13" fill="#0B1220">PVE3</text>
   <text x="74" y="301" font-size="10" fill="#334155">THINKCENTRE — PROXMOX VE</text>
 </g>
 
@@ -87,15 +87,15 @@
 <g font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace">
   <rect x="716" y="120" width="190" height="52" rx="10" fill="#FFFFFF" stroke="#64748B" stroke-width="1.5" stroke-dasharray="5 4"/>
   <rect x="716" y="120" width="5" height="52" rx="2.5" fill="#C49A2E"/>
-  <text x="734" y="145" font-size="13" fill="#0B1220">AI1</text>
+  <text x="734" y="145" font-size="13" fill="#0B1220">INFER1</text>
   <text x="734" y="161" font-size="10" fill="#334155">OPTIPLEX 7050 — NO OS YET</text>
   <rect x="716" y="190" width="190" height="52" rx="10" fill="#FFFFFF" stroke="#64748B" stroke-width="1.5" stroke-dasharray="5 4"/>
   <rect x="716" y="190" width="5" height="52" rx="2.5" fill="#C49A2E"/>
-  <text x="734" y="215" font-size="13" fill="#0B1220">AI2</text>
+  <text x="734" y="215" font-size="13" fill="#0B1220">INFER2</text>
   <text x="734" y="231" font-size="10" fill="#334155">OPTIPLEX 7050 — RMA REPLACED</text>
   <rect x="716" y="260" width="190" height="52" rx="10" fill="#FFFFFF" stroke="#64748B" stroke-width="1.5" stroke-dasharray="5 4"/>
   <rect x="716" y="260" width="5" height="52" rx="2.5" fill="#C49A2E"/>
-  <text x="734" y="285" font-size="13" fill="#0B1220">AI3</text>
+  <text x="734" y="285" font-size="13" fill="#0B1220">INFER3</text>
   <text x="734" y="301" font-size="10" fill="#334155">OPTIPLEX 7050 — NO OS YET</text>
 </g>
 

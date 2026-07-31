@@ -45,7 +45,7 @@ Most homelab writeups show you a finished rack and a parts list. The part I alwa
 
 **HA without shared storage**
 
-Three ThinkCentres, no SAN and no NAS — so instead of shared storage, the cluster runs **ZFS + Proxmox Storage Replication** on periodic snapshots. All three nodes stay live members: TC1 and TC2 are a high-priority pair, TC3 sits at lower HA priority running backup and monitoring but still picks up VMs automatically.
+Three ThinkCentres, no SAN and no NAS — so instead of shared storage, the cluster runs **ZFS + Proxmox Storage Replication** on periodic snapshots. All three nodes stay live members: PVE1 and PVE2 are a high-priority pair, PVE3 sits at lower HA priority running backup and monitoring but still picks up VMs automatically.
 
 [Read the reasoning →](docs/proxmox-ha.md)
 
@@ -82,10 +82,10 @@ The rack is built and wired, and I'm partway through configuration. Everything b
 
 |  | Workstream | State |
 |:--:|:--|:--|
-| <img src="images/icons/check.svg" width="18" alt="Done"> | Rack assembled, all 6 nodes mounted | Standing on a bench, top to bottom: touchscreen, TC1–TC3, switch, 3× OptiPlex |
+| <img src="images/icons/check.svg" width="18" alt="Done"> | Rack assembled, all 6 nodes mounted | Standing on a bench, top to bottom: touchscreen, PVE1–PVE3, switch, 3× OptiPlex |
 | <img src="images/icons/check.svg" width="18" alt="Done"> | Power wiring confirmed | 6× Anker 65W USB-C PD, one per node, all on the rack PDU |
 | <img src="images/icons/check.svg" width="18" alt="Done"> | All 6 Ethernet runs made and connected | Hand-terminated: green boots to the ThinkCentres, white to the OptiPlexes |
-| <img src="images/icons/check.svg" width="18" alt="Done"> | Proxmox VE installed on TC1 / TC2 / TC3 | Installed and booting. Not yet clustered |
+| <img src="images/icons/check.svg" width="18" alt="Done"> | Proxmox VE installed on PVE1 / PVE2 / PVE3 | Installed and booting. Not yet clustered |
 | <img src="images/icons/check.svg" width="18" alt="Done"> | AI node hardware validated | Middle OptiPlex failed on first power-up and was replaced; all three are good |
 | <img src="images/icons/progress.svg" width="18" alt="Next up"> | Proxmox cluster + HA groups + ZFS replication | Next up — nothing blocking it but time |
 | <img src="images/icons/planned.svg" width="18" alt="Blocked"> | AI nodes: Ubuntu 24.04 imaging, then k3s | **Deliberately blocked** — see below |
@@ -108,7 +108,7 @@ The rack is built and wired, and I'm partway through configuration. Everything b
 </td>
 <td valign="top">
 <ul>
-<li><img src="images/icons/cluster.svg" width="18" align="top" alt=""> <b>Proxmox cluster</b> — 3× Lenovo ThinkCentre Tiny (<code>TC1</code>, <code>TC2</code>, <code>TC3</code>), Proxmox VE installed, being configured for HA</li>
+<li><img src="images/icons/cluster.svg" width="18" align="top" alt=""> <b>Proxmox cluster</b> — 3× Lenovo ThinkCentre Tiny (<code>PVE1</code>, <code>PVE2</code>, <code>PVE3</code>), Proxmox VE installed, being configured for HA</li>
 <br>
 <li><img src="images/icons/brain-chip.svg" width="18" align="top" alt=""> <b>AI testing cluster</b> — 3× Dell OptiPlex 7050 Micro, Kaby Lake i5/i7, integrated graphics only, bare-metal Ubuntu + k3s + Ollama</li>
 <br>
@@ -147,8 +147,8 @@ Six identical chargers means one spare covers any node in the rack, the bricks s
 |---|:--:|---|---|
 | Enclosure | 1 | GeeekPi 8U 10-inch cabinet (DeskPi RackMate T1 Plus) | 260 mm depth — see [gear](docs/gear.md#enclosure) for the link |
 | Node shelves | 6 | GeeekPi 10-inch 1U mini-PC shelf | Front RJ45 CAT6 + HDMI pass-through — why the cabling presents at the front |
-| Compute nodes | 3 | Lenovo ThinkCentre Tiny — `TC1`, `TC2`, `TC3` | Proxmox VE hypervisor nodes |
-| AI cluster nodes | 3 | Dell OptiPlex 7050 Micro — `AI1`, `AI2`, `AI3` | Kaby Lake i5/i7, integrated graphics only |
+| Compute nodes | 3 | Lenovo ThinkCentre Tiny — `PVE1`, `PVE2`, `PVE3` | Proxmox VE hypervisor nodes |
+| AI cluster nodes | 3 | Dell OptiPlex 7050 Micro — `INFER1`, `INFER2`, `INFER3` | Kaby Lake i5/i7, integrated graphics only |
 | Switch | 1 | TP-Link 8-port (uplink ports, 1× SFP fiber) | Core switch, SFP unused |
 | Power | 6 chargers + 2 cable types + 1 PDU | Anker Nano 65W GaN, two tip cables, ElecVoztile PDU | See [gear](docs/gear.md#power) for links and part numbers |
 | Display | 1 | HMTECH 10.1" IPS touchscreen | 1024 × 600, HDMI, driver-free — see [gear](docs/gear.md#console) |
@@ -169,7 +169,7 @@ Six hand-made runs into one switch, all of them the same blue cable. There are n
 <div align="center">
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="images/topology-dark.svg">
-  <img src="images/topology-light.svg" width="900" alt="Network topology: TC1, TC2 and TC3 connect by green-booted cables to ports 1 to 3 of a TP-Link 8-port switch. AI1, AI2 and AI3 connect by white-booted cables to ports 4 to 6. Port 7 is free and the SFP fiber port is unused. Whether the clusters get separate VLANs is undecided.">
+  <img src="images/topology-light.svg" width="900" alt="Network topology: PVE1, PVE2 and PVE3 connect by green-booted cables to ports 1 to 3 of a TP-Link 8-port switch. INFER1, INFER2 and INFER3 connect by white-booted cables to ports 4 to 6. Port 7 is free and the SFP fiber port is unused. Whether the clusters get separate VLANs is undecided.">
 </picture>
 </div>
 
@@ -183,17 +183,17 @@ Three nodes means quorum is a majority of 2, so no external QDevice or tie-break
 
 | Node | HA priority | Day-to-day role | On failure of a primary |
 |---|:--:|---|---|
-| `TC1` | High | Primary compute | — |
-| `TC2` | High | Primary compute | — |
-| `TC3` | Low | Backup + monitoring services | Automatically picks up the failed node's guests |
+| `PVE1` | High | Primary compute | — |
+| `PVE2` | High | Primary compute | — |
+| `PVE3` | Low | Backup + monitoring services | Automatically picks up the failed node's guests |
 
 What actually happens when a primary drops:
 
 ```mermaid
 flowchart LR
-  A["TC1 goes down"] --> B{"Quorum still met?<br/>2 of 3 nodes online"}
-  B -->|"Yes"| C["TC2 and TC3 hold quorum"]
-  C --> D["HA manager restarts TC1's guests<br/>on the next-priority node"]
+  A["PVE1 goes down"] --> B{"Quorum still met?<br/>2 of 3 nodes online"}
+  B -->|"Yes"| C["PVE2 and PVE3 hold quorum"]
+  C --> D["HA manager restarts PVE1's guests<br/>on the next-priority node"]
   D --> E["Guest resumes from the most recent<br/>ZFS replication snapshot"]
   B -->|"No"| F["Cluster goes read-only<br/>no automatic failover"]
 ```
@@ -222,9 +222,9 @@ The interesting decision is the serving pattern:
 ```mermaid
 flowchart TB
   C["Client request"] --> S["k3s Service — load balanced"]
-  S --> A1["AI1 · Ollama<br/>full model in RAM"]
-  S --> A2["AI2 · Ollama<br/>full model in RAM"]
-  S --> A3["AI3 · Ollama<br/>full model in RAM"]
+  S --> A1["INFER1 · Ollama<br/>full model in RAM"]
+  S --> A2["INFER2 · Ollama<br/>full model in RAM"]
+  S --> A3["INFER3 · Ollama<br/>full model in RAM"]
 ```
 
 | | Replicated Service *(chosen)* | One model RPC-split across 3 nodes |

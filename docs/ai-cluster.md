@@ -1,6 +1,6 @@
 # AI Cluster Plan
 
-Nodes: 3x Dell OptiPlex 7050 Micro — Kaby Lake i5/i7, integrated graphics only (no dGPU), modest RAM. Suggested naming: `AI1`/`AI2`/`AI3` to match the `TC1`/`TC2`/`TC3` convention.
+Nodes: 3x Dell OptiPlex 7050 Micro — Kaby Lake i5/i7, integrated graphics only (no dGPU), modest RAM. Suggested naming: `INFER1`/`INFER2`/`INFER3` to match the `PVE1`/`PVE2`/`PVE3` convention.
 
 Realistic expectations: this is CPU-only inference on small/quantized models — not fast large-model inference. Great for testing, learning distributed serving, and running lightweight models.
 
@@ -30,6 +30,6 @@ Once the basics work, splitting a larger model across all 3 nodes (llama.cpp RPC
 ## Next steps
 
 1. Image each node with Ubuntu Server 24.04 LTS
-2. Install k3s (server on `AI1`, agents on `AI2`/`AI3`)
+2. Install k3s (server on `INFER1`, agents on `INFER2`/`INFER3`)
 3. Deploy Ollama as a replicated service across the cluster
 4. Load starting models and test

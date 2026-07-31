@@ -4,7 +4,7 @@
 <img src="../images/icons/check.svg" width="17" align="top" alt="Done"> Done — [GeeekPi 8U 10-inch cabinet](https://www.amazon.com/dp/B0FWJXF7FM) (DeskPi RackMate T1 Plus, 260 mm depth) assembled and standing on a bench.
 
 ## 2. Node mounting
-<img src="../images/icons/check.svg" width="17" align="top" alt="Done"> Done — top to bottom: touchscreen (mounted on top, hinged), TC1, TC2, TC3, TP-Link switch, then 3x OptiPlex 7050 units. PDU mounted in the rear/side section above the OptiPlex bank. Middle OptiPlex was swapped for a replacement after failing — all 3 physically good now.
+<img src="../images/icons/check.svg" width="17" align="top" alt="Done"> Done — top to bottom: touchscreen (mounted on top, hinged), PVE1, PVE2, PVE3, TP-Link switch, then 3x OptiPlex 7050 units. PDU mounted in the rear/side section above the OptiPlex bank. Middle OptiPlex was swapped for a replacement after failing — all 3 physically good now.
 
 Each node sits on a [GeeekPi 1U mini-PC shelf](https://www.amazon.com/dp/B0FN44R7F2). These carry an RJ45 CAT6 and an HDMI pass-through on the front face, so each node's rear ports are brought forward and everything patches from the front of the rack rather than reaching around the back.
 
@@ -22,13 +22,13 @@ Worth noting: 65W matches the OEM rating for both machines rather than exceeding
 
 ## 4. Network cabling
 <img src="../images/icons/check.svg" width="17" align="top" alt="Done"> Done — all 6 Ethernet runs made and connected:
-- 3x cable (green boots) — TC1/TC2/TC3 → switch
+- 3x cable (green boots) — PVE1/PVE2/PVE3 → switch
 - 3x cable (white boots) — switch → each OptiPlex node
 
 All 6 HDMI cables also installed, running to the [HMTECH 10.1" IPS touchscreen](https://www.amazon.com/dp/B0987468N2) (1024 x 600, driver-free over HDMI) hinged on top of the rack. Used for checking each node's boot and video output, not as a permanent console.
 
 ## 5. Proxmox install verification
-<img src="../images/icons/check.svg" width="17" align="top" alt="Done"> Proxmox installed on all 3 ThinkCentres (TC1, TC2, TC3) — configuration (clustering, storage, networking) still to be done. See [`proxmox-ha.md`](proxmox-ha.md).
+<img src="../images/icons/check.svg" width="17" align="top" alt="Done"> Proxmox installed on all 3 ThinkCentres (PVE1, PVE2, PVE3) — configuration (clustering, storage, networking) still to be done. See [`proxmox-ha.md`](proxmox-ha.md).
 
 ## 6. AI cluster node setup
 <img src="../images/icons/progress.svg" width="17" align="top" alt="In progress"> In progress — hardware ready (middle node replaced), nodes are un-imaged (no OS installed yet). Next step: image with Ubuntu Server. See [`ai-cluster.md`](ai-cluster.md).

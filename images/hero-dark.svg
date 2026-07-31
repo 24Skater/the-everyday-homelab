@@ -97,19 +97,19 @@
   <!-- U2-U4 ThinkCentre -->
   <rect x="848" y="89" width="304" height="34" rx="6" fill="#1E2F4A" stroke="#CBD5E1" stroke-width="1.5"/>
   <path d="M854 89A6 6 0 0 0 848 95V117A6 6 0 0 0 854 123Z" fill="#60A5FA"/>
-  <text x="872" y="110" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12" fill="#CBD5E1" textLength="160" lengthAdjust="spacingAndGlyphs">TC1 — THINKCENTRE TINY</text>
+  <text x="872" y="110" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12" fill="#CBD5E1" textLength="160" lengthAdjust="spacingAndGlyphs">PVE1 — THINKCENTRE TINY</text>
   <path d="M849 90.5h302" stroke="#FFFFFF" stroke-opacity="0.06" stroke-width="1"/>
   <circle cx="1134" cy="106" r="4" fill="#34D399"/>
 
   <rect x="848" y="126" width="304" height="34" rx="6" fill="#1E2F4A" stroke="#CBD5E1" stroke-width="1.5"/>
   <path d="M854 126A6 6 0 0 0 848 132V154A6 6 0 0 0 854 160Z" fill="#60A5FA"/>
-  <text x="872" y="147" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12" fill="#CBD5E1" textLength="160" lengthAdjust="spacingAndGlyphs">TC2 — THINKCENTRE TINY</text>
+  <text x="872" y="147" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12" fill="#CBD5E1" textLength="160" lengthAdjust="spacingAndGlyphs">PVE2 — THINKCENTRE TINY</text>
   <path d="M849 127.5h302" stroke="#FFFFFF" stroke-opacity="0.06" stroke-width="1"/>
   <circle cx="1134" cy="143" r="4" fill="#34D399"/>
 
   <rect x="848" y="163" width="304" height="34" rx="6" fill="#1E2F4A" stroke="#CBD5E1" stroke-width="1.5"/>
   <path d="M854 163A6 6 0 0 0 848 169V191A6 6 0 0 0 854 197Z" fill="#60A5FA"/>
-  <text x="872" y="184" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12" fill="#CBD5E1" textLength="160" lengthAdjust="spacingAndGlyphs">TC3 — THINKCENTRE TINY</text>
+  <text x="872" y="184" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12" fill="#CBD5E1" textLength="160" lengthAdjust="spacingAndGlyphs">PVE3 — THINKCENTRE TINY</text>
   <path d="M849 164.5h302" stroke="#FFFFFF" stroke-opacity="0.06" stroke-width="1"/>
   <circle cx="1134" cy="180" r="4" fill="#34D399"/>
 
@@ -134,19 +134,19 @@
   <!-- U6-U8 OptiPlex, dashed = not yet imaged -->
   <rect x="848" y="237" width="304" height="34" rx="6" fill="#1E2F4A" stroke="#94A3B8" stroke-width="1.5" stroke-dasharray="5 4"/>
   <path d="M854 237A6 6 0 0 0 848 243V265A6 6 0 0 0 854 271Z" fill="#E8B847"/>
-  <text x="872" y="258" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12" fill="#CBD5E1" textLength="140" lengthAdjust="spacingAndGlyphs">AI1 — OPTIPLEX 7050</text>
+  <text x="872" y="258" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12" fill="#CBD5E1" textLength="163" lengthAdjust="spacingAndGlyphs">INFER1 — OPTIPLEX 7050</text>
   <circle cx="1134" cy="254" r="4" fill="#94A3B8"/>
 
   <rect x="848" y="274" width="304" height="34" rx="6" fill="#1E2F4A" stroke="#94A3B8" stroke-width="1.5" stroke-dasharray="5 4"/>
   <path d="M854 274A6 6 0 0 0 848 280V302A6 6 0 0 0 854 308Z" fill="#E8B847"/>
-  <text x="872" y="295" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12" fill="#CBD5E1" textLength="140" lengthAdjust="spacingAndGlyphs">AI2 — OPTIPLEX 7050</text>
+  <text x="872" y="295" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12" fill="#CBD5E1" textLength="163" lengthAdjust="spacingAndGlyphs">INFER2 — OPTIPLEX 7050</text>
   <rect x="1094" y="285" width="3" height="12" fill="#F87171"/>
   <text x="1102" y="295" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="9" fill="#F87171">RMA</text>
   <circle cx="1134" cy="291" r="4" fill="#94A3B8"/>
 
   <rect x="848" y="311" width="304" height="34" rx="6" fill="#1E2F4A" stroke="#94A3B8" stroke-width="1.5" stroke-dasharray="5 4"/>
   <path d="M854 311A6 6 0 0 0 848 317V339A6 6 0 0 0 854 345Z" fill="#E8B847"/>
-  <text x="872" y="332" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12" fill="#CBD5E1" textLength="140" lengthAdjust="spacingAndGlyphs">AI3 — OPTIPLEX 7050</text>
+  <text x="872" y="332" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12" fill="#CBD5E1" textLength="163" lengthAdjust="spacingAndGlyphs">INFER3 — OPTIPLEX 7050</text>
   <circle cx="1134" cy="328" r="4" fill="#94A3B8"/>
 </g>
 

@@ -35,14 +35,14 @@ One per node, all the identical model.
 <td>
 
 **[USB-C → Lenovo slim tip, 100W PD](https://www.amazon.com/dp/B0947RD4H2)** — qty 3
-ThinkCentre Tiny (`TC1`–`TC3`).
+ThinkCentre Tiny (`PVE1`–`PVE3`).
 
 </td></tr>
 <tr><td><img src="../images/gear-cable-barrel.jpg" width="120" alt="USB-C to 4.5 by 3.0 millimetre barrel connector charging cable, 100 watt PD, braided"></td>
 <td>
 
 **[USB-C → 4.5 × 3.0 mm barrel, 100W PD](https://www.amazon.com/dp/B0975DWM1R)** — qty 3
-OptiPlex 7050 Micro (`AI1`–`AI3`).
+OptiPlex 7050 Micro (`INFER1`–`INFER3`).
 
 </td></tr>
 <tr><td><img src="../images/gear-pdu.jpg" width="120" alt="ElecVoztile 1U rack PDU with eight rear outlets and a reset switch"></td>
